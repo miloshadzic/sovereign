@@ -81,7 +81,7 @@ Installation
 
 Generate a private key and a certificate signing request (CSR):
 
-    openssl req -nodes -newkey rsa:2048 -keyout roles/common/files/wildcard_private.key -out mycert.csr
+    openssl req -nodes -newkey rsa:2048 -sha256 -keyout roles/common/files/wildcard_private.key -out mycert.csr
 
 Purchase a wildcard cert from a certificate authority, such as [Positive SSL](https://positivessl.com) or [AlphaSSL](https://www.alphassl.com). You will provide them with the contents of your CSR, and in return they will give you your signed public certificate. Place the certificate in `roles/common/files/wildcard_public_cert.crt`.
 
